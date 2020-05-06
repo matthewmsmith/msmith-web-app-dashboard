@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/
-  Chart.bundle.min.js">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Your App</title>
 </head>
@@ -33,7 +32,7 @@
         </svg>
 
         <!--ALERT BANNER-->
-        <div id="notifications">
+        <div id="alert">
           <!-- JS INSERTS HERE-->
         </div>
 
@@ -72,7 +71,7 @@
             <li class="traffic-item">monthly</li>
           </ul>
         </div>
-        <div class="container-traffic">
+        <div class="traffic-container">
           <!--ELEMENT LINE GRAPH WILL ATTACH TO-->
           <canvas id='traffic-chart'></canvas>
         </div>
@@ -82,16 +81,16 @@
       <!--DAILY TRAFFIC-->
       <section class="daily">
         <h3>daily traffic</h3>
-        <div class="daily-chart-container">
+        <div class="daily-container">
           <!--ELEMENT BAR GRAPH WILL ATTACH TOO-->
           <canvas id='daily-chart'></canvas>
         </div>
       </section>
 
       <!--MOBILE USERS-->
-      <section class="mobile-users">
+      <section class="mobile">
         <h3>mobile-users</h3>
-        <div class="mobile-users-container">
+        <div class="mobile-container">
           <!--ELEMENT DONUT GRAPH WILL ATTACH TOO-->
           <canvas id="mobile-chart"></canvas>
         </div>
@@ -99,8 +98,8 @@
 
 
       <!--TWITTER SOCIAL-->
+     
       <section class="social">
-      <section class="social-container">
         <div class="social-image">
           <img src="icons/icon-twitter.svg" alt="icon-twitter">
         </div>
@@ -108,12 +107,11 @@
           <h4>twitter</h4>
           <p>10,345</p>
         </div>
-
       </section>
 
       <!--FACEBOOK SOCIAL-->
   
-         <section class="social-container">
+         <section class="social">
         <div class="social-image">
           <img src="icons/icon-facebook.svg" alt="icon-facebook">
         </div>
@@ -124,7 +122,7 @@
        </section>
         <!--GOOGLE SOCIAL-->
      
-      <section class="social-container">
+      <section class="social">
         <div class="social-image">
           <img src="icons/icon-google-plus.svg" alt="icon-google">
         </div>
@@ -133,7 +131,7 @@
           <p>2,530</p>
         </div>
       </section>
-    </section>
+    
 
       <!--NEW MEMBERS-->
       <section class='members'>
@@ -197,10 +195,10 @@
           <p>Dan Oliver posted YourApp's SEO Tips</p>
           <p>1 day ago</p>
         </div>
-        
+      </section>
+
         <section class="settings">
           <h3>Settings</h3>
-
           <!-- CUSTOM CSS TOGGLE CODE-->
           <label class="switch-light" onclick="">
             <input class='emailNotification' type="checkbox">
@@ -237,8 +235,8 @@
           </div>
           </form>
         </section>
-      </section>
     </main>
+    <script src='js/app.js'></script>
 </body>
 
 </html>
