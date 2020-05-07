@@ -1,9 +1,40 @@
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #595959;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  color: white;
+  font-size: 1.5em;
+}
+
+.profile {
+  border-radius: 50%;
+    width: 40px;
+    height: auto;
+    margin: 0 20px;
+}
+.bell-icon {
+  margin-left: auto;
+  width: 3%;
+
+}
+.name {
+  color: white;
+  font-size: .756em;
+  margin-right: 1em;
+}
+
+
 
 
 /* GRID LAYOUT */
 .grid-container {
  display: grid;
+ 
  grid-template-columns: 100%;
  grid-template-rows: auto;
  grid-template-areas: 
@@ -15,13 +46,32 @@
 
 header {
   grid-area: header;
+  display: flex;
+  flex-direction: row;
+  background-color: #4e61cc;
+  padding: 1em;
+  align-items: center;
+  justify-content: space-between;
 }
-nav {
+.navigation {
   grid-area: navigation;
+  background-color: rgb(51, 52, 107);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1em;
+
+
+
 }
+
+
 
 main {
   grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .main{
@@ -33,6 +83,9 @@ main {
   width: 95vw;
 }
 
+
+
+
 @media (min-width: 768px) {
   .grid-container {
     display: grid;
@@ -42,7 +95,7 @@ main {
             'navigation main';
   }
   .main {
-    grid-template-columns: 50%;
+    grid-column: 50%;
   }
   .traffic, 
   .social {
@@ -57,7 +110,7 @@ main {
   .mobile,
   .activity, 
   .settings {
-    grid-template-columns: 2 / span 1;
+    grid-column: 2 / span 1;
 
   }
   .traffic-container {
