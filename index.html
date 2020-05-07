@@ -10,96 +10,95 @@
   <title>Your App</title>
 </head>
 
-<body class ='grid-container'>
-    <!-- TITLE, BELL ICON, ALERT, PICTURE AND NAME-->
-   
-    <header>
-      <h1 class='logo'>Your<span>App</span></h1>
-      <div class="bell-icon">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-          <style type="text/css">
-            .st0 {
-              fill: #FFFFFF;
-            }
-          </style>
-          <g id="_x36__6_">
-            <g>
-              <path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+<body class='grid-container'>
+  <!-- TITLE, BELL ICON, ALERT, PICTURE AND NAME-->
+
+  <header>
+    <h1 class='logo'>Your<span>App</span></h1>
+    <div class="bell-icon">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            fill: #FFFFFF;
+          }
+        </style>
+        <g id="_x36__6_">
+          <g>
+            <path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
            c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z" />
-            </g>
           </g>
-        </svg>
+        </g>
+      </svg>
 
-        <!--ALERT BANNER-->
-        <div id="alert">
-          <!-- JS INSERTS HERE-->
-        </div>
+      <!--ALERT BANNER-->
+      <div id="alert">
+        <!-- JS INSERTS HERE-->
       </div>
-      <img  class='profile' src="images/profile.jpg" alt="Profile picture of Matthew">
-      <h3 class='name'>Matthew Smith</h3>
-    </header>
+    </div>
+    <img class='profile' src="images/profile.jpg" alt="Profile picture of Matthew">
+    <h3 class='name'>Matthew Smith</h3>
+  </header>
 
-    <!--SIDE NAVIGATION-->
-    <nav class="navigation">
-      <a href="#dashboard"><img src="icons/icon-dashboard.svg" alt="icon-dashboard"></a>
-      <a href="#"><img src="icons/icon-members.svg" alt="icon-members"></a>
-      <a href="#"><img src="icons/icon-visits.svg" alt="icon-visits"></a>
-      <a href="#"><img src="icons/icon-settings.svg" alt="icon-settings"></a>
-    </nav>
+  <!--SIDE NAVIGATION-->
+  <nav class="navigation">
+    <a href="#dashboard"><img src="icons/icon-dashboard.svg" alt="icon-dashboard"></a>
+    <a href="#"><img src="icons/icon-members.svg" alt="icon-members"></a>
+    <a href="#"><img src="icons/icon-visits.svg" alt="icon-visits"></a>
+    <a href="#"><img src="icons/icon-settings.svg" alt="icon-settings"></a>
+  </nav>
 
 
-    <main class='main'>
+  <main class='main'>
     <!--SEARCH AND DASHBOARD-->
     <div class="main-header">
       <h2 class="headline">Dashboard</h2>
-        <div class="main-search">
-          <input class='dash-input' type="search" placeholder="search">
-        </div>
+      <div class="main-search">
+        <input class='dash-input' type="search" placeholder="search">
+      </div>
     </div>
 
-    
-      <!--TRAFFIC OVERALL-->
-      <section class="traffic">
-        <div class="traffic-header">
-          <h3>TRAFFIC</h3>
-          <ul class="traffic-nav">
-            <li class="traffic-nav-link">Hourly</li>
-            <li class="traffic-nav-link">Daily</li>
-            <li class="traffic-nav-link">Weekly</li>
-            <li class="traffic-nav-link">Monthly</li>
-          </ul>
-        </div>
-        <div class="traffic-container">
-          <!--ELEMENT LINE GRAPH WILL ATTACH TO-->
-          <canvas id='traffic-chart'></canvas>
-        </div>
-      </section>
+
+    <!--TRAFFIC OVERALL-->
+    <section class="traffic">
+      <div class="traffic-header">
+        <h3>TRAFFIC</h3>
+        <ul class="traffic-nav">
+          <li class="traffic-nav-link">Hourly</li>
+          <li class="traffic-nav-link">Daily</li>
+          <li class="traffic-nav-link">Weekly</li>
+          <li class="traffic-nav-link">Monthly</li>
+        </ul>
+      </div>
+      <div class="traffic-container">
+        <!--ELEMENT LINE GRAPH WILL ATTACH TO-->
+        <canvas id='traffic-chart'></canvas>
+      </div>
+    </section>
 
 
-      <!--DAILY TRAFFIC-->
-      <section class="daily">
-        <h3>DAILY TRAFFIC</h3>
-        <div class="daily-container">
-          <!--ELEMENT BAR GRAPH WILL ATTACH TOO-->
-          <canvas id='daily-chart'></canvas>
-        </div>
-      </section>
+    <!--DAILY TRAFFIC-->
+    <section class="daily">
+      <h3>DAILY TRAFFIC</h3>
+      <div class="daily-container">
+        <!--ELEMENT BAR GRAPH WILL ATTACH TOO-->
+        <canvas id='daily-chart'></canvas>
+      </div>
+    </section>
 
-      <!--MOBILE USERS-->
-      <section class="mobile">
-        <h3>MOBILE USERS</h3>
-        <div class="mobile-container">
-          <!--ELEMENT DONUT GRAPH WILL ATTACH TOO-->
-          <canvas id="mobile-chart"></canvas>
-        </div>
-      </section>
+    <!--MOBILE USERS-->
+    <section class="mobile">
+      <h3>MOBILE USERS</h3>
+      <div class="mobile-container">
+        <!--ELEMENT DONUT GRAPH WILL ATTACH TOO-->
+        <canvas id="mobile-chart"></canvas>
+      </div>
+    </section>
 
 
-      <!--TWITTER SOCIAL-->
-     
-      <section class="social-container">
-        <div class='social-twitter'>
+    <!--TWITTER SOCIAL-->
+    <section class='twitter-wrapper'>
+         <div class="social">
         <div class="social-image">
           <img class='social-icon' src="icons/icon-twitter.svg" alt="icon-twitter">
         </div>
@@ -107,11 +106,12 @@
           <h4>Twitter</h4>
           <p>10,345</p>
         </div>
-        </div>
+      </div>
+     </section>
 
       <!--FACEBOOK SOCIAL-->
-  
-         <div class="social-facebook">
+<section class="facebook-wrapper">
+     <div class="social">
         <div class="social-image">
           <img class='social-icon' src="icons/icon-facebook.svg" alt="icon-facebook">
         </div>
@@ -119,10 +119,11 @@
           <h4>Facebook</h4>
           <p>8,739</p>
         </div>
-    </div>
-        <!--GOOGLE SOCIAL-->
-     
-        <div class="social-google">
+      </div>
+      </section>
+      <!--GOOGLE SOCIAL-->
+<section class="google-wrapper">
+       <div class="social">
         <div class="social-image">
           <img class='social-icon' src="icons/icon-google-plus.svg" alt="icon-google">
         </div>
@@ -130,114 +131,114 @@
           <h4>Google+</h4>
           <p>2,530</p>
         </div>
-        </div>
-    </section>
+      </div>
+   </section>
 
-      <!--NEW MEMBERS-->
-      <section class='members'>
-        <h3>New Members</h3>
-        <div class="member">
-          <img src="images/member-1.jpg" alt="member-image">
-          <div class="name">Victoria Chambers</div>
-          <a href="#">vitoriachambers90@yahoo.com</a>
-          <p>10/15/15</p>
-        </div>
-        <div class="member">
-          <img src="images/member-2.jpg" alt="member-image">
-          <div class="name">Dale Byrd</div>
-          <a href="#">dalebyrd52@gmail.com</a>
-          <p>1/3/16</p>
-        </div>
-        <div class="member">
-          <img src="images/member-3.jpg" alt="member-image">
-          <div class="name">Damn Wang</div>
-          <a href="#">dawnwang@gmail.com</a>
-          <p>9/24/16</p>
-        </div>
-        <div class="member">
-          <img src="images/member-4.jpg" alt="member-image">
-          <div class="name">Dan Oliver</div>
-          <a href="#">danoliver@yahoo.com</a>
-          <p>5/5/20</p>
-        </div>
-        <!--MESSAGING WIDGET-->
-        <section class="message">
-          <h3>MESSAGE USER</h3>
-          <form action="" class="user-search-container">
-            <input type='search' placeholder='Search for User' class='form-field' id='user-field'>
-            <textarea placeholder="Message for User" class="form-area" id='message-field'>
+    <!--NEW MEMBERS-->
+    <section class='members'>
+      <h3>New Members</h3>
+      <div class="member">
+        <img src="images/member-1.jpg" alt="member-image">
+        <div class="name">Victoria Chambers</div>
+        <a href="#">vitoriachambers90@yahoo.com</a>
+        <p>10/15/15</p>
+      </div>
+      <div class="member">
+        <img src="images/member-2.jpg" alt="member-image">
+        <div class="name">Dale Byrd</div>
+        <a href="#">dalebyrd52@gmail.com</a>
+        <p>1/3/16</p>
+      </div>
+      <div class="member">
+        <img src="images/member-3.jpg" alt="member-image">
+        <div class="name">Damn Wang</div>
+        <a href="#">dawnwang@gmail.com</a>
+        <p>9/24/16</p>
+      </div>
+      <div class="member">
+        <img src="images/member-4.jpg" alt="member-image">
+        <div class="name">Dan Oliver</div>
+        <a href="#">danoliver@yahoo.com</a>
+        <p>5/5/20</p>
+      </div>
+      <!--MESSAGING WIDGET-->
+      <section class="message">
+        <h3>MESSAGE USER</h3>
+        <form action="" class="user-search-container">
+          <input type='search' placeholder='Search for User' class='form-field' id='user-field'>
+          <textarea placeholder="Message for User" class="form-area" id='message-field'>
            </textarea>
           <button class="btn-primary" id='send'>Send</button>
-          </form>
-        </section>
+        </form>
       </section>
+    </section>
 
-      <!--RECENT ACTIVITY-->
-      <section class='activity'>
-        <h3>Recent activity</h3>
-        <div class="member">
-          <img src="images/member-1.jpg" alt="member-image">
-          <p>Victoria Chambers commented on YourApp's SEO Tips</p>
-          <p>4 hours ago</p>
-        </div>
-        <div class="member">
-          <img src="images/member-2.jpg" alt="member-image">
-          <p>Dale Byrd like the post Facebook's Changes for 2016</p>
-          <p>5 hours ago</p>
-        </div>
-        <div class="member">
-          <img src="images/member-3.jpg" alt="member-image">
-          <p>Damn Wang commented on Facebook's changes for 2016</p>
-          <p>5 hours ago</p>
-        </div>
-        <div class="member">
-          <img src="images/member-4.jpg" alt="member-image">
-          <p>Dan Oliver posted YourApp's SEO Tips</p>
-          <p>1 day ago</p>
-        </div>
-      </section>
+    <!--RECENT ACTIVITY-->
+    <section class='activity'>
+      <h3>Recent activity</h3>
+      <div class="member">
+        <img src="images/member-1.jpg" alt="member-image">
+        <p>Victoria Chambers commented on YourApp's SEO Tips</p>
+        <p>4 hours ago</p>
+      </div>
+      <div class="member">
+        <img src="images/member-2.jpg" alt="member-image">
+        <p>Dale Byrd like the post Facebook's Changes for 2016</p>
+        <p>5 hours ago</p>
+      </div>
+      <div class="member">
+        <img src="images/member-3.jpg" alt="member-image">
+        <p>Damn Wang commented on Facebook's changes for 2016</p>
+        <p>5 hours ago</p>
+      </div>
+      <div class="member">
+        <img src="images/member-4.jpg" alt="member-image">
+        <p>Dan Oliver posted YourApp's SEO Tips</p>
+        <p>1 day ago</p>
+      </div>
+    </section>
 
-        <section class="settings">
-          <h3>Settings</h3>
-          <!-- CUSTOM CSS TOGGLE CODE-->
-          <label class="switch-light" onclick="">
-            <input class='emailNotification' type="checkbox">
-           <p>Send Email Notifications</p>
-           <span class="toggle">
-             <span>on</span>
-             <span>off</span>
-             <a></a>
-           </span>
-          </label>
-          <!--CUSTOM CSS TOGGLE CODE-->
-          <label class="switch-light" onclick="">
-            <input class='emailNotification' type="checkbox">
-           <p>Send Email Notifications</p>
-           <span class="toggle">
-             <span>on</span>
-             <span>off</span>
-             <a></a>
-           </span>
-          </label>
+    <section class="settings">
+      <h3>Settings</h3>
+      <!-- CUSTOM CSS TOGGLE CODE-->
+      <label class="switch-light" onclick="">
+        <input class='emailNotification' type="checkbox">
+        <p>Send Email Notifications</p>
+        <span class="toggle">
+          <span>on</span>
+          <span>off</span>
+          <a></a>
+        </span>
+      </label>
+      <!--CUSTOM CSS TOGGLE CODE-->
+      <label class="switch-light" onclick="">
+        <input class='emailNotification' type="checkbox">
+        <p>Send Email Notifications</p>
+        <span class="toggle">
+          <span>on</span>
+          <span>off</span>
+          <a></a>
+        </span>
+      </label>
 
-          <!--TIMEZONE SELECTOR-->
-          
-          <select class="form-field" id="timeZone">
-            <options disabled selected>Select a Timezone</options>
-            <options>Eastern</options>
-            <option>Pacific</option>
-            <option>Mountain</option>
-            <option>Central</option>
-          </select>
-          <!--BUTTON SAVE CANCEL-->
-          <div class="settings-button">
-            <button class='button-primary' id='save'>Save</button>
-            <button class='button-disabled' id='canceled'>Cancel</button>
-          </div>
-         
-        </section>
-    </main>
-    <script src='js/app.js'></script>
+      <!--TIMEZONE SELECTOR-->
+
+      <select class="form-field" id="timeZone">
+        <options disabled selected>Select a Timezone</options>
+        <options>Eastern</options>
+        <option>Pacific</option>
+        <option>Mountain</option>
+        <option>Central</option>
+      </select>
+      <!--BUTTON SAVE CANCEL-->
+      <div class="settings-button">
+        <button class='button-primary' id='save'>Save</button>
+        <button class='button-disabled' id='canceled'>Cancel</button>
+      </div>
+
+    </section>
+  </main>
+  <script src='js/app.js'></script>
 </body>
 
 </html>
