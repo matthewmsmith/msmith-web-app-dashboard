@@ -5,6 +5,8 @@ body {
   color: #595959;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  
 }
 .logo {
   color: white;
@@ -26,6 +28,13 @@ body {
   color: white;
   font-size: .756em;
   margin-right: 1em;
+}
+
+h2, h3 {
+  margin-left: 1em;
+}
+h3{
+  font-size: .9em;
 }
 
 
@@ -53,20 +62,11 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.navigation {
-  grid-area: navigation;
-  background-color: rgb(51, 52, 107);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 1em;
-
-
-
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-
-
 main {
   grid-area: main;
     display: flex;
@@ -76,6 +76,7 @@ main {
 
 .main{
   display: grid;
+  
 }
 .traffic-container, 
 .mobile-container,
@@ -83,7 +84,85 @@ main {
   width: 95vw;
 }
 
+.navigation {
+  grid-area: navigation;
+  background-color: rgb(51, 52, 107);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1em;
 
+}
+.navigation img{
+  width: 40px;
+  height: 40px;
+  padding: 1em;
+  
+}
+.traffic-header {
+  display: flex;
+  justify-content: space-between;
+
+}
+.traffic-nav {
+  display: flex;
+}
+.traffic-nav-link {
+  font-size: .7em;
+  padding: .4em;
+  margin: .2em;
+  text-decoration: none;
+  list-style: none;
+}
+.traffic-nav-link:hover {
+  background-color: #4BD865;
+  color: white;
+  border-radius: 25%;
+}
+
+
+.social-twitter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 243, 243);
+  margin-top: 1em;
+  
+}
+.social-facebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 243, 243);
+  margin-top: .5em;
+}
+
+.social-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 243, 243);
+  margin-top: .5em;
+  
+}
+.social-text h4 {
+  color: #4e61cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-text p {
+  font-size: 1.5em;
+  margin-left: .4em;
+}
+
+.social-icon {
+ width: 50px;
+ height: 50px;
+ background-color:  #4e61cc;;
+ border-radius: 50%;
+margin-right: 1em;
+}
 
 
 @media (min-width: 768px) {
