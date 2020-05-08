@@ -192,22 +192,31 @@ main {
   text-decoration: none;
   color: rgb(83, 83, 241);
 }
+form {
+  display: flex;
+  flex-direction: column;
+}
 .form-field {
-  width: 100%;
+  flex-basis: 100%;
   padding: 1em;
   margin-bottom: 1em;
   border-radius: .5em;
   border: 1px solid rgb(219, 219, 219);
 }
 .form-area {
-  width: 100%;
+  flex-basis: 100%;
   padding: 2em;
   border: 1px solid rgb(219, 219, 219);
+}
+.time-wrapper {
+  display: flex;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 .btn-primary {
   width: 100%;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: .2em;
   border-radius: .2em;
   padding: .5em;
   background-color: #4e61cc;
@@ -216,11 +225,14 @@ main {
 .button-primary,
  .button-disabled {
   width: 100%;
-  margin-top: .3em;
+  margin-bottom: .2em;
   border-radius: .2em;
   padding: .7em;
   background-color: #4e61cc;
   color: white;
+}
+.button-disabled{
+  margin-bottom: 1em;
 }
 
 

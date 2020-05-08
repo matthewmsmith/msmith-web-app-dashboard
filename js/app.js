@@ -10,16 +10,16 @@ const send = document.getElementById('send');
 
 // ALERT BANNER 
 alertBanner.innerHTML = 
-`<div class='alert-banner>
+`<div class='alert-banner'>
 <p><strong>Alert:</strong> You have <strong>6</strong> overdue task
 to complete</p>
-       <p class='alert-close'>x</p>
+       <p class='alert-banner-close'>x</p>
        </div>`
   alertBanner.addEventListener('click', (event) => {
-      if(event.target.classList.contains('alert-close')) {
+      if(event.target.classList.contains('alert-banner-close')) {
         alert.style.display= 'none';
       }
-  })
+  });
 
   // TRAFFIC OBJECTS
   let trafficData = {
