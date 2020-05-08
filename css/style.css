@@ -13,6 +13,10 @@ body {
   color: white;
   font-size: 1.5em;
 }
+.app {
+  color: rgb(51, 52, 107);
+  text-decoration: underline;
+}
 
 .profile {
   border-radius: 50%;
