@@ -1,6 +1,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  letter-spacing: .06em;
   background-color: #fff;
   color: #595959;
   margin: 0;
@@ -67,6 +68,12 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+.dash-input {
+  width: 100%;
+  border-radius: .2em;
+  padding: 1em;
+  border: 1px solid rgb(219, 219, 219);
+}
 main {
   grid-area: main;
     display: flex;
@@ -130,27 +137,27 @@ main {
 .social-image {
   background-color:  #4e61cc;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  
+    
 }
 .social-icon {
- width: 30px;
- height: 30px;
+ width: 45px;
+ height: 45px;
+ 
 
 }
 .twitter-wrapper,
 .facebook-wrapper,
 .google-wrapper {
-  margin-top: .5em;
+  margin-top: .8em;
+
 }
 
 
-  
 .social-text h4 {
   color: #4e61cc;
   display: flex;
@@ -161,6 +168,59 @@ main {
   font-size: 1.5em;
   margin-left: .4em;
 
+}
+.member-wrapper img, 
+.activity-wrapper img {
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+  
+}
+.member-wrapper, 
+.activity-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1em;
+  border: 1px solid rgb(241, 239, 239);
+}
+.new-member-text, 
+.activity-text {
+  margin: .7em;
+}
+.new-member-text a {
+  text-decoration: none;
+  color: rgb(83, 83, 241);
+}
+.form-field {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: .5em;
+  border: 1px solid rgb(219, 219, 219);
+}
+.form-area {
+  width: 100%;
+  padding: 2em;
+  border: 1px solid rgb(219, 219, 219);
+}
+.btn-primary {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-radius: .2em;
+  padding: .5em;
+  background-color: #4e61cc;
+  color: white;
+}
+.button-primary,
+ .button-disabled {
+  width: 100%;
+  margin-top: .3em;
+  border-radius: .2em;
+  padding: .7em;
+  background-color: #4e61cc;
+  color: white;
 }
 
 
