@@ -389,8 +389,12 @@ form {
 justify-content: space-between;
 }
 
+.newMembers div, .activity div {
+ height: 175px;
+}
+.toggle{
 
-
+}
 
 
 .time {
