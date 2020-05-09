@@ -380,8 +380,8 @@ form {
     
   }
   .social {
-    padding: 0 2em;
-    border-radius: .3em;
+    padding: 0 2.5em;
+    border-radius: .2em;
     border: 1px solid rgb(224, 220, 220);
   }
   
@@ -397,10 +397,12 @@ justify-content: space-between;
 
 
 .time {
-  display: flex;
   grid-column: 2 / span 3;
-  flex-direction: column;
+  
+}
 
+.timezone-wrapper {
+  width: 100%;
   
 }
 
