@@ -241,7 +241,7 @@ main {
 .activity-wrapper img {
   border-radius: 50%;
   width: 10%;
-  height: 10%;
+
   
 }
 .member-wrapper, 
@@ -323,21 +323,19 @@ form {
   .grid-container {
     display: grid;
     grid-template-columns: 70px 1fr;
+    
     grid-template-areas: 
             'header header'
             'navigation main';
   }
-  .main {
-    grid-column: 50%;
-    
-  }
+  
  
  
   .traffic {
     grid-column: 1 / span 2;
 
   }
-  
+ 
 
   .daily,
   .newMembers,
@@ -353,7 +351,7 @@ form {
   }
  
   .traffic-container {
-    width: 80vw;
+    width: 90vw;
   }
   .daily-container,
   .mobile-container {
@@ -380,8 +378,8 @@ form {
     border-radius: .2em;
     border: 1px solid rgb(224, 220, 220);
   }
-  
  
+
  
 .toggle {
  display: flex;
@@ -390,10 +388,7 @@ justify-content: space-between;
 }
 
 .newMembers div, .activity div {
- height: 175px;
-}
-.toggle{
-
+ height: 200px;
 }
 
 
@@ -405,6 +400,11 @@ justify-content: space-between;
 .timezone-wrapper {
   width: 100%;
   
+}
+.message, 
+.settings {
+  height: 100px;
+}
 }
 
 
