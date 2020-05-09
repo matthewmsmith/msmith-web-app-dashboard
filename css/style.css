@@ -325,7 +325,7 @@ form {
 @media (min-width: 768px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 70px 1fr;
     grid-template-areas: 
             'header header'
             'navigation main';
@@ -333,13 +333,16 @@ form {
   .main {
     grid-column: 50%;
   }
-  .traffic, 
-  .social {
-    grid-column: 1/ span 2;
+  .traffic {
+    grid-column: 1 / span 2;
 
   }
+  .social{
+    grid-column: 1/ span -1;
+  }
+
   .daily,
-  .members,
+  .newMembers,
   .message {
     grid-column: 1 / span 1;
   }
@@ -349,6 +352,7 @@ form {
     grid-column: 2 / span 1;
 
   }
+ 
   .traffic-container {
     width: 90vw;
   }
@@ -357,6 +361,16 @@ form {
     width: 45vw;
 
   }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  .social{
+    display: flex;
+  }
+ 
 
 }
 
