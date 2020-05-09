@@ -334,14 +334,12 @@ form {
     grid-column: 50%;
     
   }
+ 
   .traffic {
     grid-column: 1 / span 2;
 
   }
-  .social-wrapper {
-    display: flex;
-  ;
-  }
+  
 
   .daily,
   .newMembers,
@@ -357,7 +355,7 @@ form {
   }
  
   .traffic-container {
-    width: 90vw;
+    width: 80vw;
   }
   .daily-container,
   .mobile-container {
@@ -372,8 +370,27 @@ form {
     align-items: center;
   }
   
-  
- 
+  .social-wrapper {
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-around;
+    grid-column: 1 / span 2;
+    
+  }
+  .social {
+    padding: 0 2em;
+    border-radius: .3em;
+    border: 1px solid rgb(224, 220, 220);
+  }
+  .settings-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  }
+  .
 }
 
 
