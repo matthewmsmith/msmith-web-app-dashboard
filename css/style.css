@@ -373,7 +373,6 @@ form {
   
   .social-wrapper {
     display: flex;
-    
     flex-direction: row;
     justify-content: space-around;
     grid-column: 1 / span 2;
@@ -394,6 +393,7 @@ justify-content: space-between;
 }
 
   }
+  
 
 
 .time {
@@ -405,7 +405,6 @@ justify-content: space-between;
   width: 100%;
   
 }
-
 
 
 
