@@ -337,10 +337,6 @@ form {
     grid-column: 1 / span 2;
 
   }
-  .social{
-    grid-column: 1/ span -1;
-  }
-
   .daily,
   .newMembers,
   .message {
@@ -367,11 +363,10 @@ form {
     justify-content: start;
     align-items: center;
   }
-  .social{
+  .social-wrapper {
     display: flex;
   }
  
-
 }
 
 
