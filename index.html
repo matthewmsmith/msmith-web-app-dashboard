@@ -243,44 +243,49 @@
 
 <!-- CUSTOM CSS TOGGLE CODE W3 SCHOOL-->
     
+      <h3>Settings</h3>
       
-      <section class="settings"> 
-       <h3 class ='set'>Settings</h3>
+    <section class="settings">
        <p>Send Email Notification</p>
       <label class="switch">
         <input type="checkbox" class="emailNotification">
         <span class="slider round"></span>
       </label>
+    
 
    
       <!--CUSTOM CSS TOGGLE CODE W3 SCHOOL-->
-       <p>Set Profile Public</p>
+      
+     
+      <p>Set Profile Public</p>
       <label class="switch">
         <input type="checkbox" class='emailNotification'>
         <span class="slider round" data-on='off'></span>
       </label>
-      </section>
+    
+    </section>
+  
   
 
 
       <!--TIMEZONE SELECTOR-->
-
-      <div class="time-wrapper">
-      <select class="form-field" id="timeZone">
-        <options disabled selected>Select a Timezone</options>
-        <options>Eastern</options>
-        <option>Pacific</option>
-        <option>Mountain</option>
-        <option>Central</option>
+<section class="time">
+      <select id="timezone" class="timezone-wrapper" required>
+        <option disabled selected value="">Select a Timezone</option>
+        <option value="Pacific">Pacific</option>
+        <option value="Mountain">Mountain</option>
+        <option value="Central">Central</option>
+        <option value="Eastern">Eastern</option>
       </select>
-      </div>
-      <!--BUTTON SAVE CANCEL-->
-      <div class="settings-button">
-        <button class='button-primary' id='save'>Save</button>
-        <button class='button-disabled' id='canceled'>Cancel</button>
-      </div>
-
-    
+      <div class="settings-buttons">
+        <button class="button-save" id="save">
+          Save
+        </button>
+        <button class="button-cancel" id="cancel">
+          Cancel
+        </button>
+    </div>
+    </section>
   </main>
   <script src='js/app.js'></script>
 </body>

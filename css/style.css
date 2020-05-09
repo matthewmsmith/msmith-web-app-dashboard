@@ -290,8 +290,9 @@ form {
   background-color: #4e61cc;
   color: white;
 }
-.button-primary,
- .button-disabled {
+.button-save,
+ .button-cancel {
+  
   width: 100%;
   margin-bottom: .2em;
   border-radius: .2em;
@@ -383,17 +384,25 @@ form {
     border-radius: .3em;
     border: 1px solid rgb(224, 220, 220);
   }
-  .settings-button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  }
-  .
+  
+ 
+ 
+.settings{
+ display: flex;
+ align-items: center;
+justify-content: space-between;
 }
 
+  }
 
+
+.time {
+  display: flex;
+  grid-column: 2 / span 3;
+  flex-direction: column;
+
+  
+}
 
 
 
