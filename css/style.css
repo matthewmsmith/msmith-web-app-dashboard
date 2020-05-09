@@ -245,7 +245,7 @@ main {
   
 }
 .member-wrapper, 
-.activity-wrapper {
+.activity-wrapper{
   display: flex;
   justify-content: start;
   align-items: center;
@@ -276,11 +276,7 @@ form {
   padding: 2em;
   border: 1px solid rgb(219, 219, 219);
 }
-.time-wrapper {
-  display: flex;
-  margin-top: 2em;
-  margin-bottom: 1em;
-}
+
 .btn-primary {
   width: 100%;
   margin-top: 1em;
@@ -336,6 +332,7 @@ form {
     
   }
  
+ 
   .traffic {
     grid-column: 1 / span 2;
 
@@ -386,14 +383,14 @@ form {
   
  
  
-.settings{
+.toggle {
  display: flex;
  align-items: center;
 justify-content: space-between;
 }
 
-  }
-  
+
+
 
 
 .time {
