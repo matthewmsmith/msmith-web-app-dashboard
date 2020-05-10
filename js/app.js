@@ -5,7 +5,7 @@ const mobileCanvas = document.getElementById('mobile-chart');
 
 // FORM FIELDS
 const user = document.getElementById('userField');
-const message = document.getElementById('messageField');
+const message = document.getElementById('message-field');
 const send = document.getElementById('send');
 
 // ALERT BANNER 

@@ -5,7 +5,7 @@
 	padding:0;
 }
 body {
-	height: 100vh;
+	height: 100%;
 }
 .dash-top,
 .full-size-chart,
@@ -29,8 +29,7 @@ body {
 .message,
 .settings {
 	background: rgba(108, 108, 211, 0.2);
-}
-
+} 
 
 header {
 	background: #7477BF;
@@ -40,26 +39,25 @@ nav {
 }
 main {
 	background: white;
-}
+} /*************** COLORS ***************/
  
+
  
- /* MOBILE DISPLAY */
 .grid-container {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px 50px 1fr;
+  grid-template-rows: 60px 70px 1fr;
   grid-template-areas: 
      'head'
    'navigation'
    'mainContent';
 
-}
-/* GRID AREAS SETUP */
+} /******** MOBILE DISPLAY LAYOUT********/
+
 header {
   grid-area: head;
   width: 100vw;
-
 }
 nav {
    grid-area: navigation;
@@ -70,22 +68,34 @@ main {
   display: grid;
   
  
-}
-/* MAKES CONTENT IN MAIN GRID AREA */
+} /******** GRID AREAS SETUP ********/
+
+
 .half-size-charts,
 .social-media-info,
 .member-info,
 .message-and-settings {
   display: grid;
   grid-gap: 2px;
-
-}
+} 
 
 .half-size-charts,
 .member-info,
 .message-and-settings {
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 
+} /**** LAYOUT CONTROL FOR MAIN CHILDREN *********/
+
+
+/****** CHILDREN STYLE ******/
+.bell-icon {
+ width: 5%
+}
+ .icon {
+   width: 5%;
+ }
+img {
+  width: 20%;
 }
 
 
@@ -93,20 +103,20 @@ main {
 
 
 
-/* TABLET DISPLAY */
+
 
 @media (min-width: 768px) {
   .grid-container {
   grid-template-rows: 70px 60px 1fr;
   }
 
-}
+} /************ TABLET DISPLAY ************/
 
 
 @media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: 60px 1fr;
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 50px 1fr;
     grid-template-areas: 
      'head head'
      'navigation mainContent';
@@ -115,4 +125,4 @@ main {
     grid-template-columns: repeat(3, 1fr);
   }
 
-}
+} /*********** DESKTOP DISPLAY ******
