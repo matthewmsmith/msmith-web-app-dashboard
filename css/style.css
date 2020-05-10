@@ -5,7 +5,12 @@
 	padding:0;
 }
 body {
-	height: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+img {
+  width: 7%;
 }
 .dash-top,
 .full-size-chart,
@@ -13,7 +18,7 @@ body {
 .social-media-info,
 .member-info,
 .message-and-settings {
-	background: rgba(76, 79, 83, 0.2);
+	background: #3b3b3b;
 }
 
 
@@ -21,25 +26,25 @@ body {
 .chart-2,
 .members-1,
 .members-2 {
-	background: rgba(169, 148, 202, 0.2);
+	background: #3b3b3b;
 }
 .social-1,
 .social-2,
 .social-3,
 .message,
 .settings {
-	background: rgba(108, 108, 211, 0.2);
+	background: rgb(38, 38, 38);;
 } 
 
 header {
-	background: #7477BF;
+	background:  #3b3b3b;;
 }
 nav {
-	background: #4D4C71;
+	background: rgb(38, 38, 38);
 }
 main {
-	background: white;
-} /*************** COLORS ***************/
+	background: rgb(38, 38, 38);
+} /********COLORS FONT AND DEFAULT SIZES *********/
  
 
  
@@ -86,21 +91,104 @@ main {
 
 } /**** LAYOUT CONTROL FOR MAIN CHILDREN *********/
 
+.logo {
+  color: #7477bf;
+  text-decoration: underline;
+}
 
-/****** CHILDREN STYLE ******/
 .bell-icon {
- width: 5%
+width: 4%;
+margin-left: 100px;
+}
+
+.profile-picture {
+  width: 6%;
+  
+}
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
 }
  .icon {
-   width: 5%;
+   width: 25%;
+   
  }
-img {
-  width: 20%;
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+  
+}
+.headline {
+  padding-left: .5em;
+}
+.main-search-wrapper {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  padding: 1em;
+}
+.main-search {
+  width: 95%;
+  padding: 1.4em;
+  border-radius: 3%;
+  
+}
+.alert-banner {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2em;
+
+}
+.alert-half-banner {
+  background-color: #7477bf;
+  padding: .5em;
+  border-radius: .5em;
+}
+.traffic-items{
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+ 
+}
+.traffic-item {
+  list-style: none;
+  
+}
+.traffic-item:hover {
+  background-color: #7477bf;
+  border-radius: 1em;
+  padding: .2em;
+}
+.chart-1, .chart-2 {
+  padding: 2em 0;
+}
+.social-media-info {
+  margin: 2em 1em;
+  
+}
+.social-1,
+.social-2, 
+.social-3 {
+  display: flex;
+  justify-content: center;
+  padding: .9em 0;
+  
+}
+.social-icon {
+
+  width: 14%;
+  border-radius: 50%;
+  background-color: #7477bf;
+  margin-right: 1em;
+  
 }
 
 
-
-
+ /****** CHILDREN STYLE ******/
 
 
 
@@ -109,6 +197,11 @@ img {
   .grid-container {
   grid-template-rows: 70px 60px 1fr;
   }
+  .profile-picture {
+    width: 5%;
+    margin-left: 15em;
+  }
+  
 
 } /************ TABLET DISPLAY ************/
 

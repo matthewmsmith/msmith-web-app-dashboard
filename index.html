@@ -1,15 +1,18 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
+
 <body>
   <div class="grid-container">
-    <header>
-      <h1>Your App</h1>
+    <header class='header-content'>
+      <h1>On the <span class='logo'>Go</span></h1>
       <div class="bell-icon">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -25,83 +28,90 @@
             </g>
           </g>
         </svg>
-
-        <!--ALERT BANNER-->
-        <div id="alert">
-          <!-- JS INSERTS HERE-->
-        </div>
-
       </div>
-      <img src="images/profile.jpg" alt="Matthew">
-      <h3>Matthew Smith</h3>
+      <img src="images/profile.jpg" class='profile-picture' alt="Matthew">
+      <h3 class='profile-name'>Matthew Smith</h3>
     </header>
 
-     
-    <nav class="side-nav">
+
+    <nav class="navigation">
       <a href="#"><img class='icon' src="icons/icon-dashboard.svg" alt="icon-dashboard"></a>
       <a href="#"><img class='icon' src="icons/icon-members.svg" alt="icon-members"></a>
       <a href="#"><img class='icon' src="icons/icon-visits.svg" alt="icon-visits"></a>
       <a href="#"><img class='icon' src="icons/icon-settings.svg" alt="icon-settings"></a>
-    </nav><!--SIDE NAVIGATION-->
-   
+    </nav>
+    <!--SIDE NAVIGATION-->
+
     <main>
-      <div class="main-content"> 
+      <div class="main-content">
         <div class="dash-top">
-          <h2 class="headline">dashboard</h2>
-      <div class="main-search">
-        <input type="search" placeholder="search">
-      </div>
-        </div> <!--DASH TOP-->
+          <h2 class="headline">DASHBOARD</h2>
+          <div class="main-search-wrapper">
+            <input type="text" class='main-search' placeholder="search">
+          </div>
+          <!--ALERT BANNER-->
+          <div id="alert">
+            <!-- DYNAMICALLY INSERTED WITH JS-->
+          </div>
+        </div>
+        <!--DASH TOP-->
 
         <div class="full-size-chart">
-          <div class="traffic-header">
-          <h3>traffic</h3>
-          <ul class="traffic-items">
-            <li class="traffic-item">hourly</li>
-            <li class="traffic-item">daily</li>
-            <li class="traffic-item">weekly</li>
-            <li class="traffic-item">monthly</li>
-          </ul>
-          </div>
-          <canvas id='traffic-chart'></canvas>
-        </div> <!--FULL SIZE CHART-->
+            
+              
+            <ul class="traffic-items">
+              <h3>TRAFFIC</h3>
+              <li class="traffic-item">Hourly</li>
+              <li class="traffic-item">Daily</li>
+              <li class="traffic-item">Weekly</li>
+              <li class="traffic-item">Monthly</li>
+            </ul>
+      
+          <canvas id='traffic-chart'>
+          </canvas>
+        </div>
+      </div>
+        <!--FULL SIZE CHART-->
 
         <div class="half-size-charts">
-          <div class="chart-1"> 
+          <div class="chart-1">
             <canvas id='daily-chart'></canvas>
           </div>
           <div class="chart-2">
             <canvas id="mobile-chart"></canvas>
           </div>
-        </div> <!--HALF SIZE CHART-->
+        </div>
+        <!--HALF SIZE CHART-->
 
         <div class="social-media-info">
           <div class="social-1">
-            <img src="icons/icon-twitter.svg" alt="icon-twitter">
+            <img class='social-icon' src="icons/icon-twitter.svg" alt="icon-twitter">
+          
             <div class="social-text">
-              <h4>Twitter</h4>
+              <p>Twitter</p>
               <p>10,345</p>
             </div>
           </div>
           <div class="social-2">
-            <img src="icons/icon-facebook.svg" alt="icon-facebook">
+            <img class='social-icon' src="icons/icon-facebook.svg" alt="icon-facebook">
             <div class="social-text">
-              <h4>Facebook</h4>
-              <p>8,739,</p>
+              <p>Facebook</p>
+              <p>8,739</p>
             </div>
           </div>
           <div class="social-3">
-            <img src="icons/icon-google-plus.svg" alt="icon-google">
+            <img class='social-icon' src="icons/icon-google-plus.svg" alt="icon-google">
             <div class="social-text">
-              <h4>Google+</h4>
+              <p>Google</p>
               <p>2,530</p>
             </div>
           </div>
-        </div> <!--SOCIAL MEDIA INFO-->
+        </div>
+        <!--SOCIAL MEDIA INFO-->
 
         <div class="member-info">
-          <h3>New Members</h3>
-           <div class="members-1">
+          <h3>NEW MEMBERS</h3>
+          <div class="members-1">
 
             <div class="member">
               <img src="images/member-1.jpg" alt="member-image">
@@ -128,10 +138,10 @@
               <p>5/5/20</p>
             </div>
 
-         </div>
+          </div>
           <div class="members-2">
             <div class="member">
-              <h3>Recent activity</h3>
+              <h3>RECENT ACTIVITY</h3>
               <img src="images/member-1.jpg" alt="member-image">
               <p>Victoria Chambers commented on YourApp's SEO Tips</p>
               <p>4 hours ago</p>
@@ -152,41 +162,42 @@
               <p>1 day ago</p>
             </div>
           </div>
-        </div>  <!--MEMBERS INFO-->
+        </div>
+        <!--MEMBERS INFO-->
 
-           
+
         <div class="message-and-settings">
           <div class="message">
             <h3>MESSAGE USER</h3>
-            <form action="" class="user-search-container">
+            <form action="#" class="user-search-container">
               <input type='search' placeholder='Search for User' class='form-field' id='user-field'>
-              <textarea placeholder= "Message for User" class="form-area" id='message-field'>
+             <textarea placeholder="Message for User" class="form-area" id='message-field'>
             <button class="btn-primary" id='send'>Send</button>
             </textarea>
             </form>
           </div>
           <div class="settings">
-            <h3>Settings</h3>
+            <h3>SETTINGS</h3>
 
             <!-- CUSTOM CSS TOGGLE CODE-->
             <label class="switch-light" onclick="">
               <input class='emailNotification' type="checkbox">
-             <p>Send Email Notifications</p>
-             <span class="toggle">
-               <span>on</span>
-               <span>off</span>
-               <a></a>
-             </span>
+              <p>Send Email Notifications</p>
+              <span class="toggle">
+                <span>on</span>
+                <span>off</span>
+                <a></a>
+              </span>
             </label>
             <!--CUSTOM CSS TOGGLE CODE-->
             <label class="switch-light" onclick="">
               <input class='emailNotification' type="checkbox">
-             <p>Send Email Notifications</p>
-             <span class="toggle">
-               <span>on</span>
-               <span>off</span>
-               <a></a>
-             </span>
+              <p>Send Email Notifications</p>
+              <span class="toggle">
+                <span>on</span>
+                <span>off</span>
+                <a></a>
+              </span>
             </label>
             <select class="form-field" id="timeZONE">
               <options disabled selected>Select a Timezone</options>
@@ -204,8 +215,11 @@
         </div> <!-- MESSAGE & SETTINGS-->
 
       </div>
-    </main> <!--/MAIN CONTENT-->
-  </div> <!--/ GRID CONTAINER-->
+    </main>
+    <!--/MAIN CONTENT-->
+  </div>
+  <!--/ GRID CONTAINER-->
 </body>
 <script src="js/app.js"></script>
+
 </html>

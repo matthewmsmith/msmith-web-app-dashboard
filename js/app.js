@@ -4,7 +4,7 @@ const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById('mobile-chart');
 
 // FORM FIELDS
-const user = document.getElementById('userField');
+const user = document.getElementById('user-field');
 const message = document.getElementById('message-field');
 const send = document.getElementById('send');
 
@@ -12,8 +12,8 @@ const send = document.getElementById('send');
 alertBanner.innerHTML = 
 `
  <div class='alert-banner'>
-   <h4><strong>Alert:</strong> You have <strong>6</strong> overdue task to complete</h4>
-   <p class="alert-banner-close">x</p>
+   <div class='alert-half-banner'>Alert: You have <strong>6</strong> overdue task to complete
+   <strong class="alert-banner-close">x</strong></div>
  </div>
 `
   alertBanner.addEventListener('click', (event) => {
@@ -116,7 +116,7 @@ let mobileChart = new Chart(mobileCanvas, {
   options: mobileOptions
 });
 
-send.addEventListener('click', () => {
+ send.addEventListener('click', () => {
 
   if(user.value === '' && message.value === '') {
     alert('Please send out user and message field before sending');
