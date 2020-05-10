@@ -1,895 +1,118 @@
 
+ * {
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
 body {
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: .06em;
-  background-color: #fff;
-  color: #595959;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  
+	height: 100vh;
 }
-.logo {
-  color: white;
-  font-size: 1.5em;
-}
-.app {
-  color: rgb(51, 52, 107);
-  text-decoration: underline;
-}
-
-.profile {
-  border-radius: 50%;
-    width: 40px;
-    height: auto;
-    margin: 0 20px;
-}
-.bell-icon {
-  margin-left: auto;
-  width: 3%;
-
-}
-.name {
-  color: white;
-  font-size: .756em;
-  margin-right: 1em;
-}
-
-h2, h3 {
-  margin-left: 1em;
-}
-h3{
-  font-size: .9em;
-}
-
-/* w3 toggle switch */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin-left: 1em;
+.dash-top,
+.full-size-chart,
+.half-size-charts,
+.social-media-info,
+.member-info,
+.message-and-settings {
+	background: rgba(76, 79, 83, 0.2);
 }
 
 
-/* Hide default HTML checkbox */
-.switch input {display:none;}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+.chart-1,
+.chart-2,
+.members-1,
+.members-2 {
+	background: rgba(169, 148, 202, 0.2);
+}
+.social-1,
+.social-2,
+.social-3,
+.message,
+.settings {
+	background: rgba(108, 108, 211, 0.2);
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #4e61cc;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-.settings p {
-  margin-left: 1em;
-}
-
-
-
-
-/* GRID LAYOUT */
-.grid-container {
- display: grid;
- 
- grid-template-columns: 100%;
- grid-template-rows: auto;
- grid-template-areas: 
-         'header'
-         'navigation'
-         'main';
-
-}
 
 header {
-  grid-area: header;
-  display: flex;
-  flex-direction: row;
-  background-color: #4e61cc;
-  padding: 1em;
-  align-items: center;
-  justify-content: space-between;
+	background: #7477BF;
 }
-.main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.dash-input {
-  width: 100%;
-  border-radius: .2em;
-  padding: 1em;
-  border: 1px solid rgb(219, 219, 219);
+nav {
+	background: #4D4C71;
 }
 main {
-  grid-area: main;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+	background: white;
 }
+ 
+ 
+ /* MOBILE DISPLAY */
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 50px 1fr;
+  grid-template-areas: 
+     'head'
+   'navigation'
+   'mainContent';
 
-.main{
+}
+/* GRID AREAS SETUP */
+header {
+  grid-area: head;
+  width: 100vw;
+
+}
+nav {
+   grid-area: navigation;
+   
+}
+main {
+  grid-area: mainContent;
   display: grid;
   
-}
-.traffic-container, 
-.mobile-container,
-.daily-container {
-  width: 95vw;
-}
-
-.navigation {
-  grid-area: navigation;
-  background-color: rgb(51, 52, 107);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 1em;
-
-}
-.navigation img{
-  width: 40px;
-  height: 40px;
-  padding: 1em;
-  
-}
-.traffic-header {
-  display: flex;
-  justify-content: space-between;
-
-}
-.traffic-nav {
-  display: flex;
-}
-.traffic-nav-link {
-  font-size: .7em;
-  padding: .4em;
-  margin: .2em;
-  text-decoration: none;
-  list-style: none;
-}
-.traffic-nav-link:hover {
-  background-color: #4BD865;
-  color: white;
-  border-radius: 25%;
-}
-.social {
-  background-color: rgb(242, 242, 243);
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-image {
-  background-color:  #4e61cc;
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    
-}
-.social-icon {
- width: 45px;
- height: 45px;
  
+}
+/* MAKES CONTENT IN MAIN GRID AREA */
+.half-size-charts,
+.social-media-info,
+.member-info,
+.message-and-settings {
+  display: grid;
+  grid-gap: 2px;
 
 }
-.twitter-wrapper,
-.facebook-wrapper,
-.google-wrapper {
-  margin-top: .8em;
+
+.half-size-charts,
+.member-info,
+.message-and-settings {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 
 }
 
 
-.social-text h4 {
-  color: #4e61cc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.social-text p {
-  font-size: 1.5em;
-  margin-left: .4em;
 
-}
-.member-wrapper img, 
-.activity-wrapper img {
-  border-radius: 50%;
-  width: 10%;
 
-  
-}
-.member-wrapper, 
-.activity-wrapper{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 1em;
-  border: 1px solid rgb(241, 239, 239);
-}
-.new-member-text, 
-.activity-text {
-  margin: .7em;
-}
-.new-member-text a {
-  text-decoration: none;
-  color: rgb(83, 83, 241);
-}
-form {
-  display: flex;
-  flex-direction: column;
-}
-.form-field {
-  flex-basis: 100%;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: .5em;
-  border: 1px solid rgb(219, 219, 219);
-}
-.form-area {
-  flex-basis: 100%;
-  padding: 2em;
-  border: 1px solid rgb(219, 219, 219);
-}
 
-.btn-primary {
-  width: 100%;
-  margin-top: 1em;
-  margin-bottom: .2em;
-  border-radius: .2em;
-  padding: .5em;
-  background-color: #4e61cc;
-  color: white;
-}
-.button-save,
- .button-cancel {
-  
-  width: 100%;
-  margin-bottom: .2em;
-  border-radius: .2em;
-  padding: .7em;
-  background-color: #4e61cc;
-  color: white;
-}
-.button-disabled{
-  margin-bottom: 1em;
-}
 
-.alert-banner  {
-  display:flex;
-  color: white;
-  background-color: #4e61cc;
-  justify-content: space-between;
-  align-items: center;
-  width: 95%;
-  border-radius: .5em;
-  padding: .1em;  
-  
-}
-.alert-banner h4 {
-  margin-left: 2em;
-}
-.alert-banner-close {
-  font-weight: bold;
-  margin-right: 1em;
-}
+/* TABLET DISPLAY */
 
 @media (min-width: 768px) {
   .grid-container {
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    
+  grid-template-rows: 70px 60px 1fr;
+  }
+
+}
+
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 60px 1fr;
     grid-template-areas: 
-            'header header'
-            'navigation main';
+     'head head'
+     'navigation mainContent';
   }
-  
- 
- 
-  .traffic {
-    grid-column: 1 / span 2;
-
-  }
- 
-
-  .daily,
-  .newMembers,
-  .message {
-    grid-column: 1 / span 1;
-  }
-  
-  .mobile,
-  .activity, 
-  .settings {
-    grid-column: 2 / span 1;
-
-  }
- 
-  .traffic-container {
-    width: 90vw;
-  }
-  .daily-container,
-  .mobile-container {
-    width: 45vw;
-
+  .social-media-info {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-  }
-  
-  .social-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    grid-column: 1 / span 2;
-    
-  }
-  .social {
-    padding: 0 2.5em;
-    border-radius: .2em;
-    border: 1px solid rgb(224, 220, 220);
-  }
- 
-
- 
-.toggle {
- display: flex;
- align-items: center;
-justify-content: space-between;
 }
-
-.newMembers div, .activity div {
- height: 200px;
-}
-
-
-.time {
-  grid-column: 2 / span 3;
-  
-}
-
-.timezone-wrapper {
-  width: 100%;
-  
-}
-.message, 
-.settings {
-  height: 100px;
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* TOGGLE SWITCH  BELOW*/
-@media only screen {
-  /* Checkbox
- */
-  .switch-light {
-    position: relative;
-    display: block;
-    /* simulate default browser focus outlines on the switch,
-   * when the inputs are focused.
-   */ }
-    .switch-light::after {
-      clear: both;
-      content: '';
-      display: table; }
-    .switch-light *,
-    .switch-light *:before,
-    .switch-light *:after {
-      box-sizing: border-box; }
-    .switch-light a {
-      display: block;
-      transition: all 0.2s ease-out; }
-    .switch-light label,
-    .switch-light > span {
-      /* breathing room for bootstrap/foundation classes.
-     */
-      line-height: 2em; }
-    .switch-light input:focus ~ span a,
-    .switch-light input:focus + label {
-      outline-width: 2px;
-      outline-style: solid;
-      outline-color: Highlight;
-      /* Chrome/Opera gets its native focus styles.
-     */ } }
-    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-      .switch-light input:focus ~ span a,
-      .switch-light input:focus + label {
-        outline-color: -webkit-focus-ring-color;
-        outline-style: auto; } }
-
-@media only screen {
-  /* don't hide the input from screen-readers and keyboard access
- */
-  .switch-light input {
-    position: absolute;
-    opacity: 0;
-    z-index: 3; }
-  .switch-light input:checked ~ span a {
-    right: 0%; }
-  /* inherit from label
- */
-  .switch-light strong {
-    font-weight: inherit; }
-  .switch-light > span {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    min-height: 2em;
-    /* overwrite 3rd party classes padding
-   * eg. bootstrap .alert
-   */
-    padding: 0;
-    text-align: left; }
-  .switch-light span span {
-    position: relative;
-    z-index: 2;
-    display: block;
-    float: left;
-    width: 50%;
-    text-align: center;
-    user-select: none; }
-  .switch-light a {
-    position: absolute;
-    right: 50%;
-    top: 0;
-    z-index: 1;
-    display: block;
-    width: 50%;
-    height: 100%;
-    padding: 0; }
-  /* bootstrap 4 tweaks
-*/
-  .switch-light.row {
-    display: flex; }
-  .switch-light .alert-light {
-    color: #333; }
-  /* Radio Switch
- */
-  .switch-toggle {
-    position: relative;
-    display: block;
-    /* simulate default browser focus outlines on the switch,
-   * when the inputs are focused.
-   */
-    /* For callout panels in foundation
-  */
-    padding: 0 !important;
-    /* 2 items
-   */
-    /* 3 items
-   */
-    /* 4 items
-   */
-    /* 5 items
-   */
-    /* 6 items
-   */ }
-    .switch-toggle::after {
-      clear: both;
-      content: '';
-      display: table; }
-    .switch-toggle *,
-    .switch-toggle *:before,
-    .switch-toggle *:after {
-      box-sizing: border-box; }
-    .switch-toggle a {
-      display: block;
-      transition: all 0.2s ease-out; }
-    .switch-toggle label,
-    .switch-toggle > span {
-      /* breathing room for bootstrap/foundation classes.
-     */
-      line-height: 2em; }
-    .switch-toggle input:focus ~ span a,
-    .switch-toggle input:focus + label {
-      outline-width: 2px;
-      outline-style: solid;
-      outline-color: Highlight;
-      /* Chrome/Opera gets its native focus styles.
-     */ } }
-    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-      .switch-toggle input:focus ~ span a,
-      .switch-toggle input:focus + label {
-        outline-color: -webkit-focus-ring-color;
-        outline-style: auto; } }
-
-@media only screen {
-    .switch-toggle input {
-      position: absolute;
-      left: 0;
-      opacity: 0; }
-    .switch-toggle input + label {
-      position: relative;
-      z-index: 2;
-      display: block;
-      float: left;
-      padding: 0 0.5em;
-      margin: 0;
-      text-align: center; }
-    .switch-toggle a {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 0;
-      z-index: 1;
-      width: 10px;
-      height: 100%; }
-    .switch-toggle label:nth-child(2):nth-last-child(4),
-    .switch-toggle label:nth-child(2):nth-last-child(4) ~ label,
-    .switch-toggle label:nth-child(2):nth-last-child(4) ~ a {
-      width: 50%; }
-    .switch-toggle label:nth-child(2):nth-last-child(4) ~ input:checked:nth-child(3) + label ~ a {
-      left: 50%; }
-    .switch-toggle label:nth-child(2):nth-last-child(6),
-    .switch-toggle label:nth-child(2):nth-last-child(6) ~ label,
-    .switch-toggle label:nth-child(2):nth-last-child(6) ~ a {
-      width: 33.33%; }
-    .switch-toggle label:nth-child(2):nth-last-child(6) ~ input:checked:nth-child(3) + label ~ a {
-      left: 33.33%; }
-    .switch-toggle label:nth-child(2):nth-last-child(6) ~ input:checked:nth-child(5) + label ~ a {
-      left: 66.66%; }
-    .switch-toggle label:nth-child(2):nth-last-child(8),
-    .switch-toggle label:nth-child(2):nth-last-child(8) ~ label,
-    .switch-toggle label:nth-child(2):nth-last-child(8) ~ a {
-      width: 25%; }
-    .switch-toggle label:nth-child(2):nth-last-child(8) ~ input:checked:nth-child(3) + label ~ a {
-      left: 25%; }
-    .switch-toggle label:nth-child(2):nth-last-child(8) ~ input:checked:nth-child(5) + label ~ a {
-      left: 50%; }
-    .switch-toggle label:nth-child(2):nth-last-child(8) ~ input:checked:nth-child(7) + label ~ a {
-      left: 75%; }
-    .switch-toggle label:nth-child(2):nth-last-child(10),
-    .switch-toggle label:nth-child(2):nth-last-child(10) ~ label,
-    .switch-toggle label:nth-child(2):nth-last-child(10) ~ a {
-      width: 20%; }
-    .switch-toggle label:nth-child(2):nth-last-child(10) ~ input:checked:nth-child(3) + label ~ a {
-      left: 20%; }
-    .switch-toggle label:nth-child(2):nth-last-child(10) ~ input:checked:nth-child(5) + label ~ a {
-      left: 40%; }
-    .switch-toggle label:nth-child(2):nth-last-child(10) ~ input:checked:nth-child(7) + label ~ a {
-      left: 60%; }
-    .switch-toggle label:nth-child(2):nth-last-child(10) ~ input:checked:nth-child(9) + label ~ a {
-      left: 80%; }
-    .switch-toggle label:nth-child(2):nth-last-child(12),
-    .switch-toggle label:nth-child(2):nth-last-child(12) ~ label,
-    .switch-toggle label:nth-child(2):nth-last-child(12) ~ a {
-      width: 16.6%; }
-    .switch-toggle label:nth-child(2):nth-last-child(12) ~ input:checked:nth-child(3) + label ~ a {
-      left: 16.6%; }
-    .switch-toggle label:nth-child(2):nth-last-child(12) ~ input:checked:nth-child(5) + label ~ a {
-      left: 33.2%; }
-    .switch-toggle label:nth-child(2):nth-last-child(12) ~ input:checked:nth-child(7) + label ~ a {
-      left: 49.8%; }
-    .switch-toggle label:nth-child(2):nth-last-child(12) ~ input:checked:nth-child(9) + label ~ a {
-      left: 66.4%; }
-    .switch-toggle label:nth-child(2):nth-last-child(12) ~ input:checked:nth-child(11) + label ~ a {
-      left: 83%; }
-  /* Candy Theme
- * Based on the "Sort Switches / Toggles (PSD)" by Ormal Clarck
- * http://www.premiumpixels.com/freebies/sort-switches-toggles-psd/
- */
-  .switch-toggle.switch-candy,
-  .switch-light.switch-candy > span {
-    background-color: #2d3035;
-    border-radius: 3px;
-    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.2); }
-  .switch-light.switch-candy span span,
-  .switch-light.switch-candy input:checked ~ span span:first-child,
-  .switch-toggle.switch-candy label {
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 1px 1px 1px #191b1e; }
-  .switch-light.switch-candy input ~ span span:first-child,
-  .switch-light.switch-candy input:checked ~ span span:nth-child(2),
-  .switch-candy input:checked + label {
-    color: #333;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
-  .switch-candy a {
-    border: 1px solid #333;
-    border-radius: 3px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
-    background-color: #70c66b;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), transparent); }
-  .switch-candy-blue a {
-    background-color: #38a3d4; }
-  .switch-candy-yellow a {
-    background-color: #f5e560; }
-  /* iOS Theme
-*/
-  .switch-ios.switch-light span span {
-    color: #888b92; }
-  .switch-ios.switch-light a {
-    left: 0;
-    top: 0;
-    width: 2em;
-    height: 2em;
-    background-color: #fff;
-    border-radius: 100%;
-    border: 0.25em solid #D8D9DB;
-    transition: all .2s ease-out; }
-  .switch-ios.switch-light > span {
-    display: block;
-    width: 100%;
-    height: 2em;
-    background-color: #D8D9DB;
-    border-radius: 1.75em;
-    transition: all .4s ease-out; }
-  .switch-ios.switch-light > span span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    line-height: 1.875em;
-    vertical-align: middle;
-    transition: all .2s ease-out; }
-    .switch-ios.switch-light > span span:first-of-type {
-      opacity: 1;
-      padding-left: 1.875em; }
-    .switch-ios.switch-light > span span:last-of-type {
-      padding-right: 1.875em; }
-  .switch-ios.switch-light input:checked ~ span a {
-    left: 100%;
-    border-color: #4BD865;
-    margin-left: -2em; }
-  .switch-ios.switch-light input:checked ~ span {
-    border-color: #4BD865;
-    box-shadow: inset 0 0 0 30px #4BD865; }
-  .switch-ios.switch-light input:checked ~ span span:first-of-type {
-    opacity: 0; }
-  .switch-ios.switch-light input:checked ~ span span:last-of-type {
-    opacity: 1;
-    color: #fff; }
-  .switch-ios.switch-toggle {
-    background-color: #D8D9DB;
-    border-radius: 30px;
-    box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0; }
-    .switch-ios.switch-toggle a {
-      background-color: #4BD865;
-      border: 0.125em solid #D8D9DB;
-      border-radius: 1.75em;
-      transition: all 0.12s ease-out; }
-    .switch-ios.switch-toggle label {
-      height: 2.4em;
-      color: #888b92;
-      line-height: 2.4em;
-      vertical-align: middle; }
-  .switch-ios input:checked + label {
-    color: #3e4043; }
-  /* Holo Theme
- */
-  .switch-toggle.switch-holo,
-  .switch-light.switch-holo > span {
-    background-color: #464747;
-    border-radius: 1px;
-    box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
-    color: #fff;
-    text-transform: uppercase; }
-  .switch-holo label {
-    color: #fff; }
-  .switch-holo > span span {
-    opacity: 0;
-    transition: all 0.1s; }
-    .switch-holo > span span:first-of-type {
-      opacity: 1; }
-  .switch-holo > span span,
-  .switch-holo label {
-    font-size: 85%;
-    line-height: 2.15625em; }
-  .switch-holo a {
-    background-color: #666;
-    border-radius: 1px;
-    box-shadow: inset rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.3) 0 -1px 0; }
-  /* Selected ON switch-light
-*/
-  .switch-holo.switch-light input:checked ~ span a {
-    background-color: #0E88B1; }
-  .switch-holo.switch-light input:checked ~ span span:first-of-type {
-    opacity: 0; }
-  .switch-holo.switch-light input:checked ~ span span:last-of-type {
-    opacity: 1; }
-  /* Material Theme
- */
-  /* switch-light
- */
-  .switch-light.switch-material a {
-    top: -0.1875em;
-    width: 1.75em;
-    height: 1.75em;
-    border-radius: 50%;
-    background: #fafafa;
-    box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.14), 0 0.1875em 0.125em -0.125em rgba(0, 0, 0, 0.2), 0 0.125em 0.25em 0 rgba(0, 0, 0, 0.12);
-    transition: right 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
-  .switch-material.switch-light {
-    overflow: visible; }
-    .switch-material.switch-light::after {
-      clear: both;
-      content: '';
-      display: table; }
-  .switch-material.switch-light > span {
-    overflow: visible;
-    position: relative;
-    top: 0.1875em;
-    width: 3.25em;
-    height: 1.5em;
-    min-height: auto;
-    border-radius: 1em;
-    background: rgba(0, 0, 0, 0.26); }
-  .switch-material.switch-light span span {
-    position: absolute;
-    clip: rect(0 0 0 0); }
-  .switch-material.switch-light input:checked ~ span a {
-    right: 0;
-    background: #3f51b5;
-    box-shadow: 0 0.1875em 0.25em 0 rgba(0, 0, 0, 0.14), 0 0.1875em 0.1875em -0.125em rgba(0, 0, 0, 0.2), 0 0.0625em 0.375em 0 rgba(0, 0, 0, 0.12); }
-  .switch-material.switch-light input:checked ~ span {
-    background: rgba(63, 81, 181, 0.5); }
-  /* switch-toggle
- */
-  .switch-toggle.switch-material {
-    overflow: visible; }
-    .switch-toggle.switch-material::after {
-      clear: both;
-      content: '';
-      display: table; }
-  .switch-toggle.switch-material a {
-    top: 48%;
-    width: 0.375em !important;
-    height: 0.375em;
-    margin-left: 0.25em;
-    background: #3f51b5;
-    border-radius: 100%;
-    transform: translateY(-50%);
-    transition: transform .4s ease-in; }
-  .switch-toggle.switch-material label {
-    color: rgba(0, 0, 0, 0.54);
-    font-size: 1em; }
-  .switch-toggle.switch-material label:before {
-    content: '';
-    position: absolute;
-    top: 48%;
-    left: 0;
-    display: block;
-    width: 0.875em;
-    height: 0.875em;
-    border-radius: 100%;
-    border: 0.125em solid rgba(0, 0, 0, 0.54);
-    transform: translateY(-50%); }
-  .switch-toggle.switch-material input:checked + label:before {
-    border-color: #3f51b5; }
-  /* ripple
- */
-  .switch-light.switch-material > span:before,
-  .switch-light.switch-material > span:after,
-  .switch-toggle.switch-material label:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    display: block;
-    width: 4em;
-    height: 4em;
-    border-radius: 100%;
-    background: #3f51b5;
-    opacity: .4;
-    margin-left: -1.25em;
-    margin-top: -1.25em;
-    transform: scale(0);
-    transition: opacity .4s ease-in; }
-  .switch-light.switch-material > span:after {
-    left: auto;
-    right: 0;
-    margin-left: 0;
-    margin-right: -1.25em; }
-  .switch-toggle.switch-material label:after {
-    width: 3.25em;
-    height: 3.25em;
-    margin-top: -0.75em; }
-  @keyframes materialRipple {
-    0% {
-      transform: scale(0); }
-    20% {
-      transform: scale(1); }
-    100% {
-      opacity: 0;
-      transform: scale(1); } }
-  .switch-material.switch-light input:not(:checked) ~ span:after,
-  .switch-material.switch-light input:checked ~ span:before,
-  .switch-toggle.switch-material input:checked + label:after {
-    animation: materialRipple .4s ease-in; }
-  /* trick to prevent the default checked ripple animation from showing
- * when the page loads.
- * the ripples are hidden by default, and shown only when the input is focused.
- */
-  .switch-light.switch-material.switch-light input ~ span:before,
-  .switch-light.switch-material.switch-light input ~ span:after,
-  .switch-material.switch-toggle input + label:after {
-    visibility: hidden; }
-  .switch-light.switch-material.switch-light input:focus:checked ~ span:before,
-  .switch-light.switch-material.switch-light input:focus:not(:checked) ~ span:after,
-  .switch-material.switch-toggle input:focus:checked + label:after {
-    visibility: visible; } }
-
-/* Bugfix for older Webkit, including mobile Webkit. Adapted from
- * http://css-tricks.com/webkit-sibling-bug/
- */
-@media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: 80em) {
-  .switch-light,
-  .switch-toggle {
-    -webkit-animation: webkitSiblingBugfix infinite 1s; } }
-
-@-webkit-keyframes webkitSiblingBugfix {
-  from {
-    -webkit-transform: translate3d(0, 0, 0); }
-  to {
-    -webkit-transform: translate3d(0, 0, 0); } }
-
-/*# sourceMappingURL=toggle-switch.css.map */
