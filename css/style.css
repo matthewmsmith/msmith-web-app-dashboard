@@ -52,7 +52,7 @@ main {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px 70px 1fr;
+  grid-template-rows: 70px 50px 1fr;
   grid-template-areas: 
      'head'
    'navigation'
@@ -62,7 +62,7 @@ main {
 
 header {
   grid-area: head;
-  width: 100vw;
+  width: 100%;
 }
 nav {
    grid-area: navigation;
@@ -87,24 +87,35 @@ main {
 .half-size-charts,
 .member-info,
 .message-and-settings {
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 
 } /**** LAYOUT CONTROL FOR MAIN CHILDREN *********/
 
+.full-logo, 
+.profile-name {
+  font-size: 1em;
+}
+.icon-picture-name {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
 .logo {
   color: #7477bf;
   text-decoration: underline;
+  
 }
 
 .bell-icon {
 width: 4%;
-margin-left: 100px;
 }
 
-.profile-picture {
-  width: 6%;
-  
+
+.profile-picture{
+  margin: 1em;
 }
+
 .navigation {
   display: flex;
   justify-content: space-around;
