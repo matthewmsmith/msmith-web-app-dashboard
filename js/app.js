@@ -33,6 +33,8 @@ alertBanner.innerHTML =
   }]
   };
   let trafficOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
     aspectRatio: 2.5,
     animation: {
       duration:0
@@ -67,6 +69,8 @@ const dailyData = {
   }]
 };
 const dailyOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
   scales: {
     yAxes: [{
       ticks: {
@@ -103,6 +107,8 @@ const mobileData = {
 
 const mobileOptions = {
   legend: {
+    responsive: true,
+    maintainAspectRatio: false,
     position: 'right',
     labels: {
       boxWidth: 20,

@@ -127,7 +127,7 @@ input:checked + .slider:before {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px 50px 1fr;
+  grid-template-rows: 60px 50px 1fr;
   grid-template-areas: 
      'head'
    'navigation'
@@ -342,10 +342,7 @@ width: 4%;
   .grid-container {
   grid-template-rows: 70px 60px 1fr;
   }
-  .profile-picture {
-    width: 5%;
-    margin-left: 15em;
-  }
+
   
 
 } /************ TABLET DISPLAY ************/
@@ -359,6 +356,7 @@ width: 4%;
      'head head'
      'navigation mainContent';
   }
+  
   .social-media-info {
     grid-template-columns: repeat(3, 1fr);
   }
