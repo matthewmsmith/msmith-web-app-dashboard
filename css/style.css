@@ -343,6 +343,16 @@ width: 4%;
   grid-template-rows: 70px 60px 1fr;
   }
 
+  .navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+  }
+.icon {
+  width: 50%;
+  margin: 1em auto;
+}
   
 
 } /************ TABLET DISPLAY ************/
