@@ -397,13 +397,19 @@ padding: .5em
     padding: .3em;
   }
 
-
-
-  .social-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-  }
+.social-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  border: solid 1px black; 
+}
+.social-1,
+.social-2,
+.social-3 {
+  border: solid 1px black;
+  padding: 2em;
+  margin: 1em;
+}
 
 } /*********** DESKTOP DISPLAY ******
