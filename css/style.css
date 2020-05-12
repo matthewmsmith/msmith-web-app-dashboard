@@ -97,7 +97,7 @@ main {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #7477bf;
 }
 
 input:focus + .slider {
@@ -137,7 +137,7 @@ input:checked + .slider:before {
 
 header {
   grid-area: head;
-  width: 100%;
+  
 }
 nav {
    grid-area: navigation;
@@ -161,7 +161,7 @@ main {
 .half-size-charts,
 .member-info,
 .message-and-settings {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
 } /**** LAYOUT CONTROL FOR MAIN CHILDREN *********/
 
@@ -411,5 +411,15 @@ padding: .5em
   padding: 2em;
   margin: 1em;
 }
+.settings-button {
+  display: flex;
+  flex-direction: row;
+  
+}
+.button-primary, .button-disabled{
+  width: 45%;
+  margin: .5em;
+}
+
 
 } /*********** DESKTOP DISPLAY ******
