@@ -12,8 +12,7 @@ const send = document.getElementById('send');
 alertBanner.innerHTML = 
 `
  <div class='alert-banner'>
-   <div class='alert-half-banner'>Alert: You have <strong>6</strong> overdue task to complete
-   <strong class="alert-banner-close">x</strong></div>
+   <div class='alert-half-banner'><p>Alert: You have 6 overdue task to complete <span class="alert-banner-close">X</span></p></div>
  </div>
 `
   alertBanner.addEventListener('click', (event) => {

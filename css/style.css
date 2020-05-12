@@ -208,6 +208,7 @@ width: 4%;
   
 }
 .headline {
+  padding-top: .5em;
   padding-left: .5em;
 }
 .main-search-wrapper {
@@ -248,25 +249,33 @@ width: 4%;
   border-radius: 1em;
   padding: .2em;
 }
+.full-size-chart{
+  width: 95vw;
+  height: 300px;
+  position: relative;
+}
 .chart-1, .chart-2 {
   padding: 2em 0;
 }
 
-.social-1,
-.social-2,
-.social-3 {
+.social-text, .social-headline {
   display: flex;
-  padding: .9em 0;
-  margin: auto;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-.social-icon {
+.social-1 ,
+.social-2 ,
+.social-3  { 
+display: flex;
+justify-content: center;
+align-items: center;
+padding: .5em
+}
 
+.social-icon {
   width: 10%;
   border-radius: 50%;
   background-color: #7477bf;
-  margin-right: 1em;
   
 }
 
@@ -343,15 +352,10 @@ width: 4%;
   grid-template-rows: 70px 60px 1fr;
   }
 
-  .navigation{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-  }
+  
 .icon {
-  width: 50%;
-  margin: 1em auto;
+  width: 5%;
+
 }
   
 
@@ -366,9 +370,40 @@ width: 4%;
      'head head'
      'navigation mainContent';
   }
-  
-  .social-media-info {
-    grid-template-columns: repeat(3, 1fr);
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+  }
+  .icon{
+    width: 50%;
+    margin: 1em auto;
+  }
+  .dash-search {
+    display: flex;
+    justify-content:space-between;
+
+  }
+  .main-search{
+    width: 50vw;
+    height: 2vh;
+  }
+  .alert-half-banner {
+  display: flex;
+  justify-content: flex-end;
+    width: 80vw;
+    margin-left: 1.5em;
+    padding: .3em;
+  }
+
+
+
+  .social-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
   }
 
 } /*********** DESKTOP DISPLAY ******
