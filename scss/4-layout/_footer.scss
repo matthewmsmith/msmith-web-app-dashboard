@@ -1,24 +1,27 @@
-.message input {
-  padding: .5em;
-  display: flex;
-  margin: auto;
-  flex-direction: row;
-  border-radius: .3em;
-  width: 90%;
-}
+.message {
 
+  input,
+  textarea {
+    width: 90%;
+    border-radius: .3em;
+    display: flex;
+    margin: auto;
+  }
 
-.message textarea {
-  display: flex;
-  margin: 1em auto;
-  border-radius: .3em;
-  width: 90%;
+  input {
+    padding: .5em;
+    flex-direction: row;
+  }
 
-}
+  textarea {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 
-.message h3 {
-  margin: 1em;
-  text-align: center;
+  h3 {
+    margin: 1em;
+    text-align: center;
+  }
 }
 
 .settings {
@@ -33,13 +36,11 @@
   border-radius: .3em;
 }
 
-.settings-button {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
 
-}
+
+
+
+
 
 .button-primary,
 .button-disabled {

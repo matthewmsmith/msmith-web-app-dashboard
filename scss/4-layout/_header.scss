@@ -10,3 +10,35 @@
   width: 5%;
 
 }
+
+.icon-picture-name {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.bell-icon {
+  width: 4%;
+}
+
+
+.profile-picture {
+  margin: 1em;
+}
+
+.headline {
+  padding-top: .5em;
+  padding-left: .5em;
+}
+
+.full-logo,
+.profile-name {
+  font-size: 1em;
+}
+
+.logo {
+  color: #7477bf;
+  text-decoration: underline;
+
+}
