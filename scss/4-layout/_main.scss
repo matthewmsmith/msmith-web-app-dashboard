@@ -1,0 +1,134 @@
+header {
+  grid-area: head;
+
+}
+
+nav {
+  grid-area: navigation;
+
+}
+
+main {
+  grid-area: mainContent;
+  display: grid;
+
+}
+
+/******** GRID AREAS SETUP ********/
+
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 50px 1fr;
+  grid-template-areas:
+    'head'
+    'navigation'
+    'mainContent';
+}
+
+/******** MOBILE DISPLAY LAYOUT********/
+
+
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-rows: 70px 60px 1fr;
+  }
+
+}
+
+/************ TABLET DISPLAY ************/
+
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+      'head head'
+      'navigation mainContent';
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+  }
+
+  .icon {
+    width: 50%;
+    margin: 1em auto;
+  }
+
+  .dash-search {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .main-search {
+    width: 50vw;
+    height: 2vh;
+  }
+
+  .alert-half-banner {
+    display: flex;
+    justify-content: flex-end;
+    width: 80vw;
+    margin-left: 1.5em;
+    padding: .3em;
+  }
+
+  .social-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border: solid 1px black;
+  }
+
+  .social-1,
+  .social-2,
+  .social-3 {
+    border: solid 1px black;
+    padding: 2em;
+    margin: 1em;
+  }
+
+  .settings-button {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .button-primary,
+  .button-disabled {
+    width: 45%;
+    margin: .5em;
+  }
+
+
+}
+
+/*********** DESKTOP DISPLAY ******/
+
+
+
+.half-size-charts,
+.member-info,
+.message-and-settings {
+  display: grid;
+  grid-gap: 2px;
+}
+
+.half-size-charts,
+.member-info,
+.message-and-settings {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+}
+
+/**** LAYOUT CONTROL FOR MAIN CHILDREN *********/
